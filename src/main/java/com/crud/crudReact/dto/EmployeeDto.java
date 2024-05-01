@@ -20,4 +20,6 @@ public class EmployeeDto {
     @Column(nullable = false, unique = true)
     @Email
     private String email;
+    @Column(columnDefinition = "LONGBLOB")
+    private byte[] imagen;
 }

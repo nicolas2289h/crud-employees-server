@@ -1,13 +1,16 @@
 package com.crud.crudReact.controller;
 
 import com.crud.crudReact.dto.EmployeeDto;
+import com.crud.crudReact.entity.Employee;
 import com.crud.crudReact.service.EmployeeService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.NoSuchElementException;
 
@@ -43,9 +46,12 @@ public class EmployeeController {
     }
 
     @PostMapping("/employee")
-    public ResponseEntity<String> saveEmployee(@Valid @RequestBody EmployeeDto employeeDto) {
-        employeeService.createEmployee(employeeDto);
-        return new ResponseEntity<>("Employee added.", HttpStatus.CREATED);
+    public ResponseEntity<Employee> saveEmployee(@RequestParam("firstName") String firstName,
+                                                 @RequestParam("lastName") String lastName,
+                                                 @RequestParam("email") String email,
+                                                 @RequestParam("imagen") MultipartFile imagen) throws IOException {
+        ;
+        return new ResponseEntity<>(employeeService.createEmployee(firstName, lastName, email, imagen), HttpStatus.CREATED);
     }
 
     @DeleteMapping("/employee/{id}")
