@@ -1,6 +1,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-# CRUD Employees Server
+## CRUD Employees Server
 This project is the backend for an employee CRUD (Create, Read, Update, Delete) application. It provides RESTful APIs to manage employee data, including creating, retrieving, updating, and deleting employee records.
 
 ## Features
