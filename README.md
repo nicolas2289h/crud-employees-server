@@ -16,7 +16,6 @@ This project is the backend for an employee CRUD (Create, Read, Update, Delete) 
 - **Spring Boot**
 - **Spring Data JPA**
 - **MySQL** (or any other preferred relational database)
-- **OAuth2** (for authentication with Google)
 - **Maven** (for dependency management)
 
 ## Setup and Installation
